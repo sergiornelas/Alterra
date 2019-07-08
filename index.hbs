@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="image/x-icon" href="css/imagenes/icon.png" />
+	<title>Alterra Home Loans</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- ?? -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    <script
+    src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js">
+    </script>
+    
+    <style type="text/css">
+    pre{
+			background-color: transparent;
+			color: white;
+			padding: 0px;
+			border: 0px;
+			font-size: 2.5rem;
+			margin: auto;
+		}
+
+		body{
+			color: "black;"
+		}
+		@media (min-width: 1px) and (max-width:600px) { 
+			pre{font-size: 1.3rem;} 
+		}
+
+		.alert{
+			padding: 2.5px;
+			border-radius:20px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id = "primercuerpo">
+		<p id = "titulo">Become a Homeowner with Little or no Down Payment! </p>
+		<hr id="linea1"/>
+		<p id = "chatea">Chat with one of our Down Payment Assistance specialists today!</p>
+		<div class="container">
+			<div id  = "formulario" class="col-sm-12 col-md-7 col-lg-7 needs-validation">
+				<form target="_parent" id="contactForm" action="quiz.html" method="GET">
+					<div class="alert">Thank You!</div>	
+					<p id ="fill">Fill in the form below to start.</p>
+					<hr id="linea2"/>
+					
+					<!-- CAMPOS -->
+					<input pattern="[A-Za-z]{2,20}" title="Only letters. No more than 20 characters" type="text" name="nombre" required class="col campos" placeholder=" Full Name" id="nombre">
+  					
+  					<input type="number" name="telefono" required class="col campos" placeholder=" Phone" id="telefono">
+
+  					<input type="email" name ="correo" required class="col campos" placeholder=" Email" id="correo">
+
+  					<select required name="selects" class="col campos" id="ciudad" onfocus='this.size=10;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+							<option value="" disabled selected>City</option>
+							<option value="Anaheim">Anaheim</option><option value="Bakersfield">Bakersfield</option><option value="Chula Vista">Chula Vista</option>
+							<option value="Fontana">Fontana</option><option value="Fremont">Fremont</option><option value="Fresno">Fresno</option>
+							<option value="Irvine">Irvine</option><option value="Long Beach">Long Beach</option><option value="Los Angeles">Los Angeles</option>
+							<option value="Modesto">Modesto</option><option value="Oakland">Oakland</option><option value="Oxnard">Oxnard</option>
+							<option value="Riverside">Riverside</option><option value="Sacramento">Sacramento</option><option value="San Bernardino">San Bernardino</option>
+							<option value="San Diego">San Diego</option><option value="San Francisco">San Francisco</option><option value="San Jose">San Jose</option>
+							<option value="Santa Ana">Santa Ana</option><option value="Stockton">Stockton</option>
+					</select>
+  				<p style="margin:15px;"></p>
+  				<button type="submit" id="submitbutton">Do the Test</button>
+				</form>
+			</div>
+			<div class= "col-sm-12 col-md-5 col-lg-5" id = "imagenllaves"> <!-- imagen al lado de cuadro azul --></div>	 
+		</div>
+		<!-- Meet your Loan Officer -->
+		<div class="container">
+			<p id = "Meetyour" class="col">Meet your Loan Officer:</p>
+			<div class="row">
+				<div id="imagenPrestamista"></div>
+				<pre id="consultaFirebase" class="col-md-auto"></pre>
+			</div>
+		</div>
+
+	</div> <!-- fin primer cuerpo -->		 
+
+<!------------------------------------------------------------>
+
+	<div class="container col" id="segundocuerpo">
+		<p id = "WhatOur" >
+			What our clients are saying
+		</p>
+		<p id = "Wemakeeyour" class=""> 
+			We make your home-buying process as painless as possible, but don't take our word for it. Read our reviews below:
+		</p>
+		<div class="row">
+			<div class="col-xl-4"></div>	
+			<iframe class="col-xl-4" id = "ss-widget-iframe" src="https://socialsurvey.me/rest/widget/company/1117" frameborder="0" width="100%" height="450px">
+			</iframe>
+			<div class="col-xl-4"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-4"></div>	
+			<button style="margin-bottom: 75px;" onclick="topFunction()" class="col-4" id="getStarted">Get Started</button>	
+			<div class="col-4"></div>
+		</div>
+
+	</div>
+
+<!------------------------------------------------------------>
+	<div class="container" id="tercercuerpo">
+		<p id="Whywork">Why work with us?</p>
+		<div id="imagenAlterra" class="col-sm-12 col-md-12 col-lg-4"></div>
+		<div id="mostImportant" class="col-sm-12 col-md-12 col-lg-8">The most important aspect of life and wealth is homeownership. A home creates the stability for a family to thrive and succeed. A home is a sanctuary, a place of safety, family and love—truly the American Dream.</div>
+		
+		<div class="row col-12" id="divnumeros">
+			<p class="numero1 col-6">24 </p>
+			<!-- <hr class="enmedio"></hr> -->
+			<p class="numero2 col-6">30%</p>
+
+			<p class="textonumeros col-6">hours to get fully pre-approved*</p>
+			<!-- <hr class="enmedio"></hr> -->
+			<p class="textonumeros col-6">faster close times over the competition</p>
+		</div>
+		<hr>
+		<p class="col-12" id="Areyouready">Are you ready to begin <strong>building wealth through homeownership?</strong></p>
+
+		<button style="margin-top: 23px; margin-bottom: 20px; left:25%;" onclick="topFunction()" class="col-12" id="getStarted">Get Started</button>
+
+		<p class="col-12" id="hoursfrom">*24 hours from the start of application and full documentation submission</p>
+	</div>
+
+<!------------------------------------------------------------>
+	<div class="container col" id="muchotexto">
+		<div class="row">
+			<div class="col-1"></div>
+			<div id="muchomuchotexto" class="col-10">
+				<p>Alterra Group, LLC. is an Equal Housing Opportunity lender. Alterra Group, LLC. ,d/b/a Alterra Home Loans, d/b/a Legacy Home Loans, d/b/a Novus Home Loans, d/b/a Inspiro Financial, d/b/a Pacific Home Loans and is headquartered at 350 S. Rampart Blvd Ste 310, Las Vegas, NV 89145, Toll Free (877)-845-4805; </p> <p>NMLS #133739 (<a href="http://www.nmlsconsumeraccess.org/" type="url">www.nmlsconsumeraccess.org</a>).</p><p>This is not an offer for extension of credit or a commitment to lend.</p><p>Alabama – Consumer Credit License #22321; Arizona Mortgage Banker License #0915860; California – Licensed by the Department of Business Oversight under the CA Residential Mortgage Lending Act. – DBO Residential Mortgage Lending Act License #4131101; Colorado Mortgage Company Registration NMLS# 133739, Regulated by the Division of Real Estate; Connecticut Mortgage Lender License ML-133739; District of Columbia – Mortgage Dual Authority License #MLB133739; Florida Mortgage Lender Servicer License #MLD381; Georgia Residential Mortgage Licensee #30249; Illinois - Illinois Residential Mortgage Licensee, License MB: 6761067; Indiana-DFI – First Lien Mortgage Lending License 32967; Iowa – Mortgage Banker License #2016-0093 & 2016-0094; Kansas – Mortgage company License MC.0025464; Kentucky – Mortgage Company License MC421149; Louisiana - Louisiana Lender License (no license #); Maryland – Mortgage Lender License #22375; Michigan – 1st Mortgage Broker/Lender/Servicer Registrant FR0021588, 2nd Mortgage Broker/Lender/Servicer Registrant SR0021589; Minnesota Mortgage Lender Licensee MN-MO-133739; Missouri - Company Registration 18-2401; Nebraska – Mortgage Banker License NMLS #133739; Nevada Mortgage Banker License #3388 & 3873; Nevada Mortgage Broker License #2916; New Hampshire Mortgage Banker License – 21713 – MB; New Jersey Residential Mortgage Lender License NMLS#133739 – Licensed by the N.J. Department of Banking and Insurance; New Mexico Mortgage Loan Company License – 133739 North Carolina Mortgage Lender License L-173477; Ohio Mortgage Loan Act Certificate of Registration SM.502067.000; Oklahoma – Mortgage Lender License MLO11324 & ML011348; Oregon Mortgage Lending License ML-4879; Pennsylvania – Mortgage Lender License #55099 Licensed by the Department of Banking; Rhode Island Licensed Lender, NMLS 133739; South Carolina – Mortgage Lender / Servicing License MLS – 133739 & MLS – 133739 ITN #1; Tennessee Mortgage Lender License 131625; Texas-SML Mortgage Banker Registration NMLS #133739, Utah – Alterra Group, LLC is licensed as DRE Mortgage Entity # 10950285; Utah DFI Residential First Mortgage Notification License (no license #); Virginia NMLS ID #133739; Washington Consumer Loan Company License CL-133739; Wisconsin – Mortgage Banker License 133739BA; Wyoming Mortgage Lender/Broker License #3100.</p>
+				<p>Satisfied with our service? <a href="https://www.goalterra.com/customer-satisfaction-survey/" type="url">Tell us here</a>— Dissatisfied with our service? File a complaint <a href="https://www.goalterra.com/file-a-complaint/" type="url">here. </a></p><p>© 2006-2019 Alterra Home Loans | <a href="https://www.goalterra.com/privacy-policy/" type="url"> Privacy Policy. </a> | <a href="https://www.goalterra.com/cookiepolicy/" type="url">Cookie Policy. </a></p>
+			</div>
+			<div class="col-1"></div>
+		</div>
+	</div>
+	
+	<!--importantísimo-->
+	<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="js/CapturarDatos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="image/x-icon" href="css/imagenes/icon.png" />
+	<title>Alterra Home Loans</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- ?? -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    <script
+    src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js">
+    </script>
+
+    <style type="text/css">
+    pre{
+	background-color: transparent;
+	box-shadow: inset 0 0 0 1000px rgba(5, 23, 65,.705);
+	color: white;
+	padding: 0px;
+	border: 0px;
+	font-size: 2.5rem;
+	margin: auto;
+	}
+
+	@media (min-width: 1px) and (max-width:600px) { 
+	  pre{font-size: 1.3rem;} 
+	}
+
+	.alert{
+		padding: 2.5px;
+		border-radius:20px;
+	}
+
+	body{
+			background-color: orange;
+	}
+	
+	object{
+		overflow:hidden;
+	}
+	</style>
+	<style type="text/css">
+		body{
+			background-color: orange;
+		}
+		object{
+			overflow:hidden;
+		}
+		
+		@media (min-width: 300px) and (max-width:349px) { 
+ 		#primeraParte{height:1457px} 
+		}
+		@media (min-width: 350px) and (max-width:378px) { 
+ 		#primeraParte{height:1449px} 
+		}
+		@media (min-width: 379px) and (max-width:384px) { 
+ 		#primeraParte{height:1402px} 
+		}
+		@media (min-width: 385px) and (max-width:399px) { 
+ 		#primeraParte{height:1357px} 
+		}
+		@media (min-width: 400px) and (max-width:438px) { 
+ 		#primeraParte{height:1512px} 
+		}
+		@media (min-width: 439px) and (max-width:444px) { 
+ 		#primeraParte{height:1462px} 
+		}
+		@media (min-width: 445px) and (max-width:500px) { 
+ 		#primeraParte{height:1418px} 
+		}
+		@media (min-width: 501px) and (max-width:577px) { 
+ 		#primeraParte{height:1418px} 
+		}
+		@media (min-width: 578px) and (max-width:580px) { 
+ 		#primeraParte{height:1368px} 
+		}
+		@media (min-width: 581px) and (max-width:682px) { 
+ 		#primeraParte{height:1323px} 
+		}
+		@media (min-width: 683px) and (max-width:767px) { 
+ 		#primeraParte{height:1273px} 
+		}
+		@media (min-width: 768px) and (max-width:957px) { 
+ 		#primeraParte{height:973px} 
+		}
+		@media (min-width: 958px) and (max-width:1000px) { 
+ 		#primeraParte{height:927px} 
+		}
+		@media (min-width: 1001px) and (max-width:1012px) { 
+ 		#primeraParte{height:1073px} 
+		}
+		@media (min-width: 1013px) and (max-width:1499px) { 
+ 		#primeraParte{height:991px} 
+		}
+		@media (min-width: 1500px) and (max-width:3000px) { 
+ 		#primeraParte{height:1051px} 
+		}
+		
+		/*----------------------------------------------*/
+		@media (min-width: 300px) and (max-width:318px) { 
+ 		#consultaLoanOfficer{height:592px} 
+		}
+		@media (min-width: 319px) and (max-width:438px) { 
+ 		#consultaLoanOfficer{height:530px} 
+		}
+		@media (min-width: 439px) and (max-width:533px) { 
+ 		#consultaLoanOfficer{height:524px} 
+		}
+		@media (min-width: 534px) and (max-width:600px) { 
+ 		#consultaLoanOfficer{height:457px} 
+		}
+		@media (min-width: 601px) and (max-width:991px) { 
+ 		#consultaLoanOfficer{height:559px} 
+		}
+		@media (min-width: 992px) and (max-width:1517px) { 
+	 	#consultaLoanOfficer{height:349px} 
+		}
+		@media (min-width: 1518px) and (max-width:3000px) { 
+	 	#consultaLoanOfficer{height:350px} 
+		}
+
+		/*----------------------------------------------*/
+		@media (min-width: 300px) and (max-width:333px) { 
+	 	#segundaParte{height:2622px} 
+		}
+		@media (min-width: 334px) and (max-width:336px) { 
+	 	#segundaParte{height:2596px} 
+		}
+		@media (min-width: 337px) and (max-width:337px) { 
+	 	#segundaParte{height:2586px} 
+		}
+		@media (min-width: 338px) and (max-width:343px) { 
+	 	#segundaParte{height:2534px} 
+		}
+		@media (min-width: 344px) and (max-width:345px) { 
+	 	#segundaParte{height:2519px} 
+		}
+		@media (min-width: 346px) and (max-width:351px) { 
+	 	#segundaParte{height:2514px} 
+		}
+		@media (min-width: 352px) and (max-width:364px) { 
+	 	#segundaParte{height:2498px} 
+		}
+		@media (min-width: 365px) and (max-width:388px) { 
+	 	#segundaParte{height:2479px} 
+		}
+		@media (min-width: 389px) and (max-width:500px) { 
+	 	#segundaParte{height:2441px} 
+		}
+		@media (min-width: 401px) and (max-width:426px) { 
+	 	#segundaParte{height:2896px} 
+		}
+		@media (min-width: 427px) and (max-width:442px) { 
+	 	#segundaParte{height:2844px} 
+		}
+		@media (min-width: 443px) and (max-width:500px) { 
+	 	#segundaParte{height:2805px} 
+		}
+		@media (min-width: 461px) and (max-width:479px) { 
+	 	#segundaParte{height:2665px} 
+		}
+		@media (min-width: 480px) and (max-width:504px) { 
+	 	#segundaParte{height:2615px} 
+		}
+		@media (min-width: 505px) and (max-width:540px) { 
+	 	#segundaParte{height:3003px} 
+		}
+		@media (min-width: 541px) and (max-width:564px) { 
+	 	#segundaParte{height:2895px} 
+		}
+		@media (min-width: 565px) and (max-width:575px) { 
+	 	#segundaParte{height:2780px} 
+		}
+		@media (min-width: 576px) and (max-width:601px) { 
+	 	#segundaParte{height:2899px} 
+		}
+		@media (min-width: 602px) and (max-width:769px) { 
+	 	#segundaParte{height:2999px} 
+		}
+		@media (min-width: 770px) and (max-width:1053px) { 
+	 	#segundaParte{height:2599px} 
+		}
+		@media (min-width: 1054px) and (max-width:1100px) { 
+	 	#segundaParte{height:2405px} 
+		}
+		@media (min-width: 1101px) and (max-width:1313px) { 
+	 	#segundaParte{height:2475px} 
+		}
+		@media (min-width: 1314px) and (max-width:1405px) { 
+	 	#segundaParte{height:2335px} 
+		}
+		@media (min-width: 1406px) and (max-width:1505px) { 
+	 	#segundaParte{height:2300px} 
+		}
+		@media (min-width: 1506px) and (max-width:1517px) { 
+	 	#segundaParte{height:2281px}
+	 	}
+	 	@media (min-width: 1518px) and (max-width:1642px) { 
+	 	#segundaParte{height:2298px} 
+		}
+		@media (min-width: 1643px) and (max-width:1779px) { 
+	 	#segundaParte{height:2262px} 
+		}
+		@media (min-width: 1800px) and (max-width:3000px) { 
+	 	#segundaParte{height:2243px} 
+		}
+	</style>
+
+</head>
+<object id="primeraParte" data="primeraParte.html" width=100% height=1055px ></object>
+<body>
+		<div style= "background-image: url(css/imagenes/casalinda3.jpg); background-repeat: no-repeat; background-size: cover; box-shadow: inset 0 0 0 1000px rgba(5, 23, 65,.555); /*Fondo azul alpha*/">
+			<!-- Meet your Loan Officer -->
+			<div class="container">
+			
+				<p id = "Meetyour" class="col">Meet your Loan Officer:</p>
+				<div class="row">		 	
+					<div style="
+						width:250px;
+						height:250px;
+						margin: auto; /*PARA CENTRAR LOS OBJETOS!!!*/
+						border-radius:300px;
+						background-image: url(css/imagenes/18.jpg);
+						background-size: cover;
+						border-width: 5px;
+						border-color: white;
+						border-style: groove;
+						margin-bottom: 32px;
+					"></div>
+					<pre id="consultaFirebase" class="col-md-auto"></pre>
+					<div style="height: 100px; box-shadow: inset 0 0 0 1000px rgba(5, 23, 65,.705); /*Fondo azul alpha*/"></div>
+						<script>
+								// When the user clicks on the button, scroll to the top of the document
+						function topFunction() {
+				  		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+						}
+					
+						(function ochentasiete(){
+						    // Initialize Firebase
+						    const config = {  //<------------------ESTO DEBE PERMANECER ADENTRO DE LA FUNCIÓN.
+						        apiKey: "AIzaSyBTgN8ndKjnTv2CTNKM21fdbu6OxXh47i8",
+						        authDomain: "test-4bc6d.firebaseapp.com",
+						        databaseURL: "https://test-4bc6d.firebaseio.com",
+						        projectId: "test-4bc6d",
+						        storageBucket: "test-4bc6d.appspot.com",
+						        messagingSenderId: "373636233286"
+						    };
+						    firebase.initializeApp(config);  
+						    // Get elements
+						    const preObject = document.getElementById('consultaFirebase');        
+
+						    //Create references   
+						    const dbRefObject = firebase.database().ref().child('Loan Officers/18');        
+
+						    //Sync object changes
+						    dbRefObject.on('value', snap => {
+						        preObject.innerText=JSON.stringify(snap.val(), null, 1);
+						    });
+						}());
+					</script>
+				</div>
+			</div>
+		</div>
+
+	<!--importantísimo-->
+	<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+	<object id="segundaParte" data="segundaParte.html" width=100% height=2245px></object>
+</html>

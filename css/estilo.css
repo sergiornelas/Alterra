@@ -1,0 +1,412 @@
+#primercuerpo{
+	background-image: url("imagenes/cocina.jpg");
+	background-size: cover;
+	box-shadow: inset 0 0 0 1000px rgba(5, 23, 65,.655); /*Fondo azul alpha*/
+	padding: 50px;
+	}
+	
+@media (min-width: 10px) and (max-width:400px) { 
+  #primercuerpo{padding: 20px;} 
+}
+/*NO FUE NECESARIO PONER HEIGHT DEL BACKGROUND PORQUE LOS DIVS SE ENCARGAN
+	DE EXPANDER EL FONDO*/
+
+#titulo{
+	text-align: center;
+	color: white;
+	font-weight: 700;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.9),
+				 0px 8px 13px rgba(0,0,0,0.2),
+				 0px 18px 23px rgba(0,0,0,0.3);
+}
+/*Título*/
+/*Custom media queries*/
+@media (min-width: 10px) and (max-width:1000px) { 
+  #titulo{font-size:4.5rem; line-height: 50px; } 
+}
+
+@media (min-width: 1001px) and (max-width:1499px) { 
+  #titulo{font-size:5.5rem; margin-left: 100px;
+	margin-right: 100px;} 
+}
+
+@media (min-width: 1500px) and (max-width:2000px) { 
+  #titulo{font-size:7.5rem; margin-left: 200px;
+	margin-right: 200px;} 
+}
+
+#linea1{
+	margin: 45px;
+	border-color: orange;
+	border: 0;
+	height: 4.5px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 150, 0, 0.75), rgba(100, 0, 0, 0));
+}
+
+#lineaQuizz{
+	margin: 15px;
+	border-color: orange;
+	border: 0;
+	height: 4.5px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 150, 0, 0.75), rgba(100, 0, 0, 0));
+}
+
+#chatea{
+	font-size: 30px;
+	color: #CACACA;
+	text-align: center;
+	margin-bottom: 50px; 
+}
+
+#formulario{
+	border-radius:10px;
+	border:5px solid rgba(255, 150, 0, 0.50) ;
+	padding-bottom: 80px;
+	padding-left: 80px;
+	padding-right: 80px;
+	font-size: 25px;
+	text-align: center;
+	background-color: rgba(46, 46, 46,.8);
+
+	overflow:hidden; /*Cuando se sobrepasa el botón submit del margen desaparece*/
+}
+
+@media (min-width: 10px) and (max-width:1000px) { 
+  #formulario{padding: 40px;} 
+}
+
+/*NUEVO*/
+@media (min-width: 800px) and (max-width:3000px) { 
+  #formulario{height: 537.5px;} 
+}
+
+#fill{
+	padding-top: 35px;
+	font-weight: 700;
+	color: white;
+	text-align: center;
+}
+
+@media (min-width: 1px) and (max-width:999px) { 
+  #fill{padding-top: 16px;} 
+}
+
+@media (min-width: 1000px) and (max-width:1050px) { 
+  #fill{font-size:20px;} 
+}
+
+#linea2{
+	margin: 25px;
+	border-color: orange;
+	border: 0;
+	height: 4.5px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 150, 0, 0.75), rgba(100, 0, 0, 0));
+}
+
+.campos{
+	margin: 10px;
+	width: 350px;
+	height: 50px;
+	color: black;
+	border-radius: 10px;
+}
+
+@media (min-width: 10px) and (max-width:600px) { 
+  .campos{font-size: 18px; margin-left: 1px} 
+}
+
+.campos:hover {
+	box-shadow: inset 0 0 100px 100px rgba(202, 202, 202, 202);
+}
+
+#ciudad{
+  min-height: 40px;
+  max-height: 235px;
+  overflow: scroll;
+	border-top: 1px solid #f4f4f4;
+}
+
+#imagenllaves{
+	background-image: url("imagenes/llaves.jpg");
+	height: 537.5px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-radius: 10px;
+}
+
+@media (min-width: 10px) and (max-width:767px) { 
+  #imagenllaves{height: 300px;} 
+}
+
+.form-control{
+	text-align: right;
+}
+
+#submitbutton{
+	margin: 10px;
+	width: 200px;
+	height: 50px;
+	color: black;
+	border-radius: 10px;
+	background: #FF9600;
+	font-weight: 600;
+}
+
+@media (min-width: 10px) and (max-width:600px) { 
+  #submitbutton{margin-left: 6%;} 
+}
+
+#submitbutton:hover {
+	box-shadow: inset 0 0 100px 100px rgba(255, 195, 110, 10);
+}
+
+@media (min-width: 10px) and (max-width:600px) { 
+  #submitbutton{margin-top: 3.5px;} 
+}
+/*NUEVO*/
+@media (min-width: 10px) and (max-width:600px) { 
+  #submitbutton{width: 150px;} 
+}
+
+#Meetyour{
+	color: rgba(255, 150, 0);
+	font-size: 45px;
+	font-style: italic;
+	margin-top: 0px;
+	text-align: center;
+	margin-bottom: 0px;
+	font-weight:500;
+	text-decoration: underline;
+	text-shadow: 2px 2px #23201F;
+}
+
+@media (min-width: 1500px) and (max-width:2000px) { 
+  #imagenPrestamista{margin-left:170px;} 
+}
+
+/*--------------------------------------------------------*/
+
+#segundocuerpo{
+	/*height: 500px;*/
+	background-color: #F2F2F2;
+	color: black;
+}
+
+#WhatOur{
+	/*font-size: 70px;*/
+	font-size: 7rem;
+	font-weight: 700;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	margin: 30px;
+}
+
+@media (min-width: 10px) and (max-width:400px) { 
+  #WhatOur{font-size: 3.5rem;} 
+}
+
+@media (min-width: 10px) and (max-width:600px) { 
+  #WhatOur{margin: 10px;} 
+}
+
+@media (min-width: 401px) and (max-width:1100px) { 
+  #WhatOur{font-size: 5rem;} 
+}
+
+#Wemakeeyour{
+	font-size: 2.5rem;
+	color: black;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+@media (min-width: 10px) and (max-width:400px) {
+  #Wemakeeyour{margin-bottom: 1px;} 
+}
+
+@media (min-width: 10px) and (max-width:400px) {  /*padding: 20px;*/
+  #Wemakeeyour{font-size: 1.5rem;} 
+}
+
+@media (min-width: 401px) and (max-width:1100px) { 
+  #Wemakeeyour{font-size: 2rem;} 
+}
+
+#ss-widget-iframe{    /*SOCIAL SURVEY*/
+	overflow-y: scroll;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 1px;
+}
+
+@media (min-width: 800px) and (max-width:1500px) { 
+  #ss-widget-iframe{margin-left: 100px; margin-right: 100px;} 
+}
+
+@media (min-width: 1px) and (max-width:500px) { 
+  #ss-widget-iframe{height: 425px;} 
+}
+
+#getStarted{
+	height: 50px;
+	width: 50%; 
+	color: black;
+	border-radius: 10px;
+	  background: #FF9600;
+	  font-weight: 600;
+	  font-size: 3rem;
+	  margin-bottom: 40px;
+}
+
+@media (min-width: 10px) and (max-width:489px) { 
+  #getStarted{font-size: 1.6rem;} 
+}
+
+@media (min-width: 490px) and (max-width:1100px) { 
+  #getStarted{font-size: 2.5rem;} 
+}
+
+/*--------------------------------------------------------*/
+
+#tercercuerpo{
+	background-color: white;
+}
+
+#Whywork{
+	font-size: 7rem;
+	font-weight: 700;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	margin: 30px;
+}
+
+@media (min-width: 10px) and (max-width:600px) { 
+  #Whywork{margin: 20px;} 
+}
+
+@media (min-width: 10px) and (max-width:1100px) { 
+  #Whywork{font-size: 5rem;} 
+}
+
+#imagenAlterra{
+	background-image: url("imagenes/alterralogo.jpg");
+	background-size: cover;
+	height: 250px;
+	width: 250px;
+	box-shadow: 0px 4px 3px rgba(0,0,0,0.9),
+				 0px 8px 13px rgba(0,0,0,0.5),
+				 0px 18px 23px rgba(0,0,0,0.5);
+	margin: auto;
+}
+
+@media (min-width: 510px) and (max-width:750px) { /*Rango mínimo al cual llega Google Chrome*/
+  #imagenAlterra{margin-left: 120px;} 
+}
+
+@media (min-width: 751px) and (max-width:1000px) {
+  #imagenAlterra{margin-left: 200px;} 
+}
+
+#mostImportant{
+	font-size: 2.5rem;
+	color: black;
+	margin: auto;
+	padding-top: 40px;
+	padding-left: 75px;
+	margin-bottom: 30px;
+}
+
+@media (min-width: 10px) and (max-width:400px) { 
+  #mostImportant{font-size: 1.75rem; padding-left: 17px;} 
+}
+
+@media (min-width: 401px) and (max-width:1000px) { 
+  #mostImportant{padding-left: 17px;} 
+}
+
+@media (min-width: 1001px) and (max-width:3000px) { 
+  #mostImportant{margin-bottom: 100px;} 
+}
+
+.numero1{
+	color: #FF9600;
+	font-size: 7rem;
+	font-weight: 700;
+	text-align: center;
+	border-right: 1.45px solid #EAEAEA;
+}
+
+.numero2{
+	color: #FF9600;
+	font-size: 7rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+hr{
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.textonumeros{
+	font-size: 2.5rem;
+	color: black;
+	text-align: center;
+	font-style: italic;
+}
+
+@media (min-width: 1px) and (max-width:400px) { 
+  .textonumeros{font-size: 1.5rem;} 
+}
+
+#Areyouready{
+	font-size: 2.5rem;
+	color: black;
+	margin: auto;
+	margin-top: 25px;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+@media (min-width: 10px) and (max-width:400px) { 
+  #Areyouready{font-size: 1.75rem; padding-left: 17px;} 
+}
+
+#hoursfrom{
+	font-size: 2rem;
+	color: #BDBDBD;
+	font-style: italic;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+@media (min-width: 10px) and (max-width:400px) { 
+  #hoursfrom{font-size: 1.3rem;} 
+}
+
+/*--------------------------------------------------------*/
+#muchotexto{
+	background-color: #213743;
+}
+
+#muchomuchotexto{
+	font-size: 1.3rem;
+	color: #A1A1A1;
+	text-align: justify;
+	font-weight: 500;
+	font-family: Arial;
+	
+	padding-top: 90px;
+	padding-bottom: 70px;
+}
+
+@media (min-width: 10px) and (max-width:500px) { 
+  #muchomuchotexto{font-size: .72rem; padding-top: 45px;
+	padding-bottom: 35px;} 
+}
+
+@media (min-width: 501px) and (max-width:1000px) { 
+  #muchomuchotexto{font-size: 1rem;} 
+}

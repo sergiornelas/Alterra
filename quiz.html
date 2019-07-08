@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="shortcut icon" type="image/x-icon" href="css/imagenes/icon.png" />
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/estiloQuizz.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script
+    src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js">
+    </script>  
+</head>
+<body>
+        <script>
+                /* function getParameterByName(name, url) {
+                    if (!url) url = window.location.href;
+                    name = name.replace(/[\[\]]/g, '\\$&');
+                    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                        results = regex.exec(url);
+                    if (!results) return null;
+                    if (!results[2]) return '';
+                    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                }
+                
+                var sn = getParameterByName('selects');
+                console.log(sn);
+                    if(sn=="Anaheim"){
+                        console.log("Soy anaijeim");
+                    }
+                    if(sn =="Bakersfield"){
+                        console.log("Soy beikersfield");
+                    } */
+            </script>
+
+    <div class="col-12" id ="headQuizz">Make your first payment!</div>
+    <div id="imagenFondoQuizz">
+        <div class ="container" >
+        <div class="gridquiz col-xl-12 col-xs-12">
+                <form id="contactForm" action="claseAlta.html">
+                    <h1>Apply now</h1>
+                    <hr style="margin-bottom: 20px">
+                    <p id="question"></p>
+                    <div class="buttonsQuizz">
+                        <p id ="pregunta">Type of Loan</p>
+                        
+                        <span id="P1R1">
+                        <button type=button onclick="pregunta1_1()"  class="P1R1" id="respuesta1">Home Purchase</button>
+                        </span>
+
+                        <span id="P1R2">
+                        <button type=button onclick="pregunta1_2()"  class="P1R2" id="respuesta1">Refinance</button>
+                        </span>
+
+                        <span id="P1R3">
+                        <button type=button onclick="pregunta1_3()"  class="P1R3" id="respuesta1" >Student Loan</button>
+                        </span>
+
+                        <span id="P1R4">
+                        <button type=button onclick="pregunta1_4()"  class="P1R4" id="respuesta1" >Home Equity Loan</button>
+                        </span>
+
+                        <hr id="lineaQuizz">
+                        <p id ="pregunta">Home Description</p>
+
+                        <span id="P2R1">
+                        <button type=button onclick="pregunta2_1()" class="P2R1" id="respuesta2">Single family</button>
+                        </span>
+
+                        <span id="P2R2">
+                        <button type=button onclick="pregunta2_2()" class="P2R2" id="respuesta2">Multi-family</button>
+                        </span>
+
+                        <span id="P2R3">
+                        <button type=button onclick="pregunta2_3()" class="P2R3" id="respuesta2">Condominium</button>
+                        </span>
+
+                        <span id="P2R4">
+                        <button type=button onclick="pregunta2_4()" class="P2R4" id="respuesta2">Townhouse</button>
+                        </span>
+
+                        <hr id="lineaQuizz">
+                        <p id ="pregunta">Credit Score</p>
+
+                        <span id="P3R1">
+                        <button type=button onclick="pregunta3_1()" class="P3R1" id="respuesta3">Poor (579 and below)</button>
+                        </span>
+
+                        <span id="P3R2">
+                        <button type=button onclick="pregunta3_2()" class="P3R2" id="respuesta3">Below Average (580-619)</button></span>
+
+                        <span id="P3R3">
+                        <button type=button onclick="pregunta3_3()" class="P3R3" id="respuesta3">Average (620-659)</button>
+                        </span>
+
+                        <span id="P3R4">
+                        <button type=button onclick="pregunta3_4()" class="P3R4" id="respuesta3">Good (660 and Above)</button>
+                        </span>
+
+                        <hr id="lineaQuizz">
+                        <p id ="pregunta">Home will be used for</p>
+
+                        <span id="P4R1">
+                        <button type=button onclick="pregunta4_1()" class="P4R1" id="respuesta4">Primary Residence</button>
+                        </span>
+
+                        <span id="P4R2">
+                        <button type=button onclick="pregunta4_2()" class="P4R2" id="respuesta4">Rest House</button>
+                        </span>
+
+                        <span id="P4R3">
+                        <button type=button onclick="pregunta4_3()" class="P4R3" id="respuesta4">Secondary Vacation</button>
+                        </span>
+
+                        <span id="P4R4">
+                        <button type=button onclick="pregunta4_4()" class="P4R4" id="respuesta4">Rental/Investment</button>
+                        </span>
+
+                        <hr id="lineaQuizz">
+                        <p id ="pregunta">Your Current Home Buying Situation</p>
+
+                        <span id="P5R1">
+                        <button type=button onclick="pregunta5_1()" class="P5R1" id="respuesta5">Signed a purchase agreement</button> </span>
+
+                        <span id="P5R2">
+                        <button type=button onclick="pregunta5_2()" class="P5R2" id="respuesta5">Offer Pending/Found a House</button></span>
+
+                        <span id="P5R3">
+                        <button type=button onclick="pregunta5_3()" class="P5R3" id="respuesta5">Buying in 2-3 months</button>
+                        </span>
+
+                        <span id="P5R4">
+                        <button type=button onclick="pregunta5_4()" class="P5R4" id="respuesta5">Researching Options</button>
+                        </span>
+
+                        <hr id="lineaQuizz">
+                        <p id ="pregunta">Purchase price of the new home</p>
+
+                        <span id="P6R1">
+                        <button type=button onclick="pregunta6_1()" class="P6R1" id="respuesta6">50,000-200,000</button>
+                        </span>
+
+                        <span id="P6R2">
+                        <button type=button onclick="pregunta6_2()" class="P6R2" id="respuesta6">200,000-400,000</button>
+                        </span>
+
+                        <span id="P6R3">
+                        <button type=button onclick="pregunta6_3()" class="P6R3" id="respuesta6">400,000-600,000</button>
+                        </span>
+
+                        <span id="P6R4">
+                        <button type=button onclick="pregunta6_4()" class="P6R4" id="respuesta6">600,000+</button>
+                        </span>
+
+                        <hr id="lineaQuizz">
+                        <p id ="pregunta">Estimated Down Payment</p>
+
+                        <span id="P7R1">
+                        <button type=button onclick="pregunta7_1()" class="P7R1" id="respuesta7">0%</button>
+                        </span>
+
+                        <span id="P7R2">
+                        <button type=button onclick="pregunta7_2()" class="P7R2" id="respuesta7">3-5%</button>
+                        </span>
+
+                        <span id="P7R3">
+                        <button type=button onclick="pregunta7_3()" class="P7R3" id="respuesta7">6-19%</button>
+                        </span>
+
+                        <span id="P7R4">
+                        <button type=button onclick="pregunta7_4()" class="P7R4" id="respuesta7">20% or higher</button>
+                        </span>
+
+                        <hr id="lineaQuizz">
+                        <p id ="pregunta">Employment Status</p>
+
+                        <span id="P8R1">
+                        <button type=button onclick="pregunta8_1()" class="P8R1" id="respuesta8">Employed</button>
+                        </span>
+
+                        <span id="P8R2">
+                        <button type=button onclick="pregunta8_2()" class="P8R2" id="respuesta8">Self-Employed</button>
+                        </span>
+
+                        <span id="P8R3">
+                        <button type=button onclick="pregunta8_3()" class="P8R3" id="respuesta8">Retired</button>
+                        </span>
+
+                        <span id="P8R4">
+                        <button type=button onclick="pregunta8_4()" class="P8R4" id="respuesta8">Not-Employed</button>
+                        </span>
+
+                        <hr id="lineaQuizz">
+                        <p id ="pregunta">Number of late mortgage payments in the past 12 months</p>
+
+                        <span id="P9R1">
+                        <button type=button onclick="pregunta9_1()" class="P9R1" id="respuesta9">None</button>
+                        </span>
+
+                        <span id="P9R2">
+                        <button type=button onclick="pregunta9_2()" class="P9R2" id="respuesta9">1</button>
+                        </span>
+
+                        <span id="P9R3">
+                        <button type=button onclick="pregunta9_3()" class="P9R3" id="respuesta9">2</button>
+                        </span>
+
+                        <span id="P9R4">
+                        <button type=button onclick="pregunta9_4()" class="P9R4" id="respuesta9">2+</button>
+                        </span>
+
+                        <hr id="lineaQuizz">
+                        <p id ="pregunta">Any bankruptcy in the past 3 years?</p>
+
+                        <span id="P10R1">
+                        <button type=button onclick="pregunta10_1()" class="P10R1" id="respuesta10">Yes</button>
+                        </span>
+
+                        <span id="P10R2">
+                        <button type=button onclick="pregunta10_2()" class="P10R2" id="respuesta10">No</button>
+                        </span>
+
+                        <span id="P10R3">
+                        <button type=button onclick="pregunta10_3()" class="P10R3" id="respuesta10">Just once</button>
+                        </span>
+
+                        <span id="P10R4">
+                        <button type=button onclick="pregunta10_4()" class="P10R4" id="respuesta10">Did not process</button>
+                        </span>
+
+                        <hr id="lineaQuizz">
+                        <p id ="pregunta">Any foreclosure in the past 3 years?</p>
+
+                        <span id="P11R1">
+                        <button type=button onclick="pregunta11_1()" class="P11R1" id="respuesta11">Yes</button>
+                        </span>
+
+                        <span id="P11R2">
+                        <button type=button onclick="pregunta11_2()" class="P11R2" id="respuesta11">No</button>
+                        </span>
+
+                        <span id="P11R3">
+                        <button type=button onclick="pregunta11_3()" class="P11R3" id="respuesta11">Just once</button>
+                        </span>
+
+                        <span id="P11R4">
+                        <button type=button onclick="pregunta11_4()" class="P11R4" id="respuesta11">Did not process</button>
+                        </span>
+
+                        <hr id="lineaQuizz">
+                        <p id ="pregunta">Can you show proof of income?</p>
+
+                        <span id="P12R1">
+                        <button type=button onclick="pregunta12_1()" class="P12R1" id="respuesta12">Yes</button>
+                        </span>
+
+                        <span id="P12R2">
+                        <button type=button onclick="pregunta12_2()" class="P12R2" id="respuesta12">No</button>
+                        </span>
+
+                        <span id="P12R3">
+                        <button type=button onclick="pregunta12_3()" class="P12R3" id="respuesta12">Paysheet</button>
+                        </span>
+
+                        <span id="P12R4">
+                        <button type=button onclick="pregunta12_4()" class="P12R4" id="respuesta12">Email</button>
+                        </span>
+
+                        <hr id="lineaQuizz">
+                        <p id ="pregunta">Active or previous US military service?</p>
+
+                        <span id="P13R1">
+                        <button type=button onclick="pregunta13_1()" class="P13R1" id="respuesta13">Yes</button>
+                        </span>
+
+                        <span id="P13R2">
+                        <button type=button onclick="pregunta13_2()" class="P13R2" id="respuesta13">No</button>
+                        </span>
+
+                        <span id="P13R3"> 
+                        <button type=button onclick="pregunta13_3()" class="P13R3" id="respuesta13">Just Selected</button>
+                        </span>
+
+                        <span id="P13R4">
+                        <button type=button onclick="pregunta13_4()" class="P13R4" id="respuesta13">Army support</button>
+                        </span>
+
+                        </br></br></br></br>
+
+                        <p id ="pregunta" style="font-style: oblique;">Check all questions are answered</p>
+                        <span id="puntaje">
+                            <span id="puntaje2">
+                                    <button type=submit onclick="puntajeTotalValor()" class="col-12 disablear" id="TOTAL_SCORE" >Submit</button>
+                            </span>
+                        </span>
+                        <script>
+                            
+                        </script>
+                    </div>
+                    <hr style="margin-top: 50px">
+                </form>
+        </div>
+        </div>
+    </div>
+    <hr id="lineaQuizz">
+
+                            <!-- span ID se utilizó para el score -->
+                            <!-- class se utilizó para agregar el color -->
+                            <!-- ID se utilizó para agregar a la base de datos -->
+
+<!------------------------------------------------------------>
+
+    <div class="container" id="tercercuerpo">
+        <p id="Whywork">Why work with us?</p>
+        <div id="imagenAlterra" class="col-sm-12 col-md-12 col-lg-4"></div>
+        <div id="mostImportant" class="col-sm-12 col-md-12 col-lg-8">The most important aspect of life and wealth is homeownership. A home creates the stability for a family to thrive and succeed. A home is a sanctuary, a place of safety, family and love—truly the American Dream.</div>
+    </div>
+
+<!------------------------------------------------------------>
+    <div class="container col" id="muchotexto">
+        <div class="row">
+            <div class="col-1"></div>
+            <div id="muchomuchotexto" class="col-10">
+                <p>Alterra Group, LLC. is an Equal Housing Opportunity lender. Alterra Group, LLC. ,d/b/a Alterra Home Loans, d/b/a Legacy Home Loans, d/b/a Novus Home Loans, d/b/a Inspiro Financial, d/b/a Pacific Home Loans and is headquartered at 350 S. Rampart Blvd Ste 310, Las Vegas, NV 89145, Toll Free (877)-845-4805; </p> <p>NMLS #133739 (<a href="http://www.nmlsconsumeraccess.org/" type="url">www.nmlsconsumeraccess.org</a>).</p><p>This is not an offer for extension of credit or a commitment to lend.</p><p>Alabama – Consumer Credit License #22321; Arizona Mortgage Banker License #0915860; California – Licensed by the Department of Business Oversight under the CA Residential Mortgage Lending Act. – DBO Residential Mortgage Lending Act License #4131101; Colorado Mortgage Company Registration NMLS# 133739, Regulated by the Division of Real Estate; Connecticut Mortgage Lender License ML-133739; District of Columbia – Mortgage Dual Authority License #MLB133739; Florida Mortgage Lender Servicer License #MLD381; Georgia Residential Mortgage Licensee #30249; Illinois - Illinois Residential Mortgage Licensee, License MB: 6761067; Indiana-DFI – First Lien Mortgage Lending License 32967; Iowa – Mortgage Banker License #2016-0093 & 2016-0094; Kansas – Mortgage company License MC.0025464; Kentucky – Mortgage Company License MC421149; Louisiana - Louisiana Lender License (no license #); Maryland – Mortgage Lender License #22375; Michigan – 1st Mortgage Broker/Lender/Servicer Registrant FR0021588, 2nd Mortgage Broker/Lender/Servicer Registrant SR0021589; Minnesota Mortgage Lender Licensee MN-MO-133739; Missouri - Company Registration 18-2401; Nebraska – Mortgage Banker License NMLS #133739; Nevada Mortgage Banker License #3388 & 3873; Nevada Mortgage Broker License #2916; New Hampshire Mortgage Banker License – 21713 – MB; New Jersey Residential Mortgage Lender License NMLS#133739 – Licensed by the N.J. Department of Banking and Insurance; New Mexico Mortgage Loan Company License – 133739 North Carolina Mortgage Lender License L-173477; Ohio Mortgage Loan Act Certificate of Registration SM.502067.000; Oklahoma – Mortgage Lender License MLO11324 & ML011348; Oregon Mortgage Lending License ML-4879; Pennsylvania – Mortgage Lender License #55099 Licensed by the Department of Banking; Rhode Island Licensed Lender, NMLS 133739; South Carolina – Mortgage Lender / Servicing License MLS – 133739 & MLS – 133739 ITN #1; Tennessee Mortgage Lender License 131625; Texas-SML Mortgage Banker Registration NMLS #133739, Utah – Alterra Group, LLC is licensed as DRE Mortgage Entity # 10950285; Utah DFI Residential First Mortgage Notification License (no license #); Virginia NMLS ID #133739; Washington Consumer Loan Company License CL-133739; Wisconsin – Mortgage Banker License 133739BA; Wyoming Mortgage Lender/Broker License #3100.</p>
+                <p>Satisfied with our service? <a href="https://www.goalterra.com/customer-satisfaction-survey/" type="url">Tell us here</a>— Dissatisfied with our service? File a complaint <a href="https://www.goalterra.com/file-a-complaint/" type="url">here. </a></p><p>© 2006-2019 Alterra Home Loans | <a href="https://www.goalterra.com/privacy-policy/" type="url"> Privacy Policy. </a> | <a href="https://www.goalterra.com/cookiepolicy/" type="url">Cookie Policy. </a></p>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+
+    <script src="js/question.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    <!-- <script src="index.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+</body>
+</html>

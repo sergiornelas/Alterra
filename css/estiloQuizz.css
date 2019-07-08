@@ -1,0 +1,110 @@
+#headQuizz{ /*Encabezado Make your...*/
+	background-image: url("imagenes/headQuizz.jpg");
+	background-repeat: no-repeat;
+	height: 70px;
+	text-align: center;
+	color: #004792;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 50px;
+	font-weight: 550;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.1),
+							 0px 8px 13px rgba(0,0,0,0.1),
+							 0px 18px 23px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 0px) and (max-width:960px) { 
+#headQuizz{font-size:0rem;} 
+}
+
+.gridquiz { /*Hoja en blanco del quiz*/
+	width: 600px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 10px 50px 50px 50px;
+	border-radius: 50px;
+	border: 1px #cbcbcb;
+	box-shadow: 5px 15px 25px #0B0B0C;
+	margin-bottom: 100px;
+}
+
+.gridquiz h1 { /*Título QUIZ*/
+	font-family: "sans-serif";
+	background-color: #004792;
+	font-size: 60px;
+	text-align: center;
+	color: #ffffff;
+	padding: 2px 0px;
+	border-radius: 50px;
+}
+
+@media (min-width: 0px) and (max-width:500px) { 
+.gridquiz h1{font-size: 30px;} 
+}
+
+#imagenFondoQuizz{
+	background-image: url("imagenes/cocina.jpg");
+	background-size: cover;
+	box-shadow: inset 0 0 0 1000px rgba(5, 23, 65,.655); /*Fondo azul alpha*/
+	padding: 50px;
+	margin: 0px;
+}
+
+@media (min-width: 300px) and (max-width:500px) { 
+	#imagenFondoQuizz{padding: 10px;} 
+}
+
+#pregunta{
+	font-size: 3rem;
+	text-align: center;
+	margin: 25px;
+	font-weight: 550;
+}
+
+#respuesta1, #respuesta2, #respuesta3, #respuesta4, #respuesta5, #respuesta6, #respuesta7, #respuesta8, #respuesta9, #respuesta10, #respuesta11, #respuesta12, #respuesta13{
+	font-size: 2rem;
+	border-radius: 50px;
+	margin: 7px;
+	margin-bottom: 30px;
+	width: 200px;
+	background-color: #D7D7D7;
+}
+
+@media (min-width: 300px) and (max-width:500px) { 
+	#respuesta1, #respuesta2, #respuesta3, #respuesta4, #respuesta5, #respuesta6, #respuesta7, #respuesta8, #respuesta9, #respuesta10, #respuesta11, #respuesta12, #respuesta13
+	 {margin-left: 27px;} 
+}
+
+@media (min-width: 589px) and (max-width:3000px) { 
+#respuesta1, #respuesta2, #respuesta3, #respuesta4, #respuesta5, #respuesta6, #respuesta7, #respuesta8, #respuesta9, #respuesta10, #respuesta11, #respuesta12, #respuesta13
+ {margin-left: 47px;} 
+}
+
+#respuesta1:hover, #respuesta2:hover, #respuesta3:hover, #respuesta4:hover, #respuesta5:hover, #respuesta6:hover, #respuesta7:hover, #respuesta8:hover, #respuesta9:hover, #respuesta10:hover, #respuesta11:hover, #respuesta12:hover, #respuesta13:hover{
+	box-shadow: inset 0 0 100px 100px rgba(255, 195, 110, 10);
+}
+
+#TOTAL_SCORE{
+	margin-top: 5px;
+	width: 200px;
+	height: 50px;
+	color: black;
+	border-radius: 10px;
+	background: #FF9600;
+	font-weight: 600;
+	font-size: 2.5rem;
+	left: 41%;
+}
+
+#TOTAL_SCORE:hover {
+	box-shadow: inset 0 0 100px 100px rgba(255, 195, 110, 10);
+}
+
+@media (min-width: 10px) and (max-width:600px) { 
+#TOTAL_SCORE{margin-top: 3.5px; left: 5%;} 
+}
+
+#TOTAL_SCORE:disabled {
+  background: #B5B5B5;
+  color: #474747;
+  box-shadow: inset 0 0 100px 100px rgba(181, 181, 181, 10);
+}

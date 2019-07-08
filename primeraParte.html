@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="image/x-icon" href="css/imagenes/icon.png" />
+	<title>Alterra Home Loans</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <script
+    src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js">
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+   
+    <style type="text/css">
+    body{
+			color: "black;"
+		}
+		</style>
+</head>
+<body>
+	<div id = "primercuerpo">
+		<p id = "titulo">Become a Homeowner with Little or no Down Payment! </p>
+		<hr id="linea1"/>
+		<p id = "chatea">Chat with one of our Down Payment Assistance specialists today!</p>
+		<div class="container">
+			<div id="formulario" class="col-sm-12 col-md-7 col-lg-7 needs-validation">
+				<form target="_parent" action="quiz.html" id="contactForm"               method="GET"    >	<!--Metodo get para agarrar la ciudad y utilizarla en otro html (quiz)-->
+					<p id ="fill">Fill in the form below to start.</p>
+					<hr id="linea2"/>
+				
+					<!-- CAMPOS -->
+					<input required pattern="[A-Za-z]{2,20}" title="Only letters. No more than 20 characters" type="text" name="nombre" class="col campos" placeholder=" Full Name" id="nombre">
+  					
+  					<input required type="number" name="telefono" class="col campos" placeholder=" Phone" id="telefono">
+
+  					<input required type="email" name ="correo" class="col campos" placeholder=" Email" id="correo">
+
+  					<select required             name="selects"           class="col campos" id="ciudad" onfocus='this.size=10;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+							<option value="" disabled selected>City</option>
+							<option value="Anaheim">Anaheim</option><option value="Bakersfield">Bakersfield</option><option value="Chula Vista">Chula Vista</option>
+							<option value="Fontana">Fontana</option><option value="Fremont">Fremont</option><option value="Fresno">Fresno</option>
+							<option value="Irvine">Irvine</option><option value="Long Beach">Long Beach</option><option value="Los Angeles">Los Angeles</option>
+							<option value="Modesto">Modesto</option><option value="Oakland">Oakland</option><option value="Oxnard">Oxnard</option>
+							<option value="Riverside">Riverside</option><option value="Sacramento">Sacramento</option><option value="San Bernardino">San Bernardino</option>
+							<option value="San Diego">San Diego</option><option value="San Francisco">San Francisco</option><option value="San Jose">San Jose</option>
+							<option value="Santa Ana">Santa Ana</option><option value="Stockton">Stockton</option>
+						</select>
+					<p style="margin:15px;"></p>
+					<button type="submit" id="submitbutton">Do the Test</button>
+				</form>
+			</div>
+			<div class= "col-sm-12 col-md-5 col-lg-5" id = "imagenllaves"> <!-- imagen al lado de cuadro azul --></div>	 
+		</div>
+		</div>
+	
+		<script src="js/CapturarDatos.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<!-- <script src="FormularioIndex.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
