@@ -12,4 +12,7 @@ https://test-4bc6d.firebaseapp.com/1
 
 ## Preview:
 <p float="left">
-  <img src="https://github.com/sergiornelas/Alterra-home-loans-webApp/1.jpeg" width="52%"
+  <img src="https://github.com/sergiornelas/Alterra-home-loans-webApp/blob/master/alterraPreview1.jpeg" width="52%"
+  <img src="https://github.com/sergiornelas/Alterra-home-loans-webApp/blob/master/alterraPreview2.jpeg" width="52%"
+  <img src="https://github.com/sergiornelas/Alterra-home-loans-webApp/blob/master/alterraPreview3.jpeg" width="52%"
+</p>
